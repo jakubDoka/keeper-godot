@@ -1,0 +1,60 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Reference",
+"class": "AES",
+"language": "GDScript",
+"path": "res://src/util/AES.gd"
+}, {
+"base": "Reference",
+"class": "Binary",
+"language": "GDScript",
+"path": "res://src/util/Binary.gd"
+}, {
+"base": "Node",
+"class": "NetClient",
+"language": "GDScript",
+"path": "res://src/server_api/Cleint.gd"
+}, {
+"base": "Object",
+"class": "ServerPacket",
+"language": "GDScript",
+"path": "res://src/server_api/ServerPacket.gd"
+}, {
+"base": "Reference",
+"class": "UUID",
+"language": "GDScript",
+"path": "res://src/util/UUID.gd"
+} ]
+_global_script_class_icons={
+"AES": "",
+"Binary": "",
+"NetClient": "",
+"ServerPacket": "",
+"UUID": ""
+}
+
+[application]
+
+config/name="keeper"
+config/icon="res://icon.png"
+
+[network]
+
+ssl/certificates="res://server.crt"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
